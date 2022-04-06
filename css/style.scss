@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;800&display=swap');
+
+$primary-color:orange;
+$secondary-color:#666;
+$light-color:#eee;
+$white:#fff;
+$black:#000;
+
+*{
+    font-family:'Poppins', sans-serif;
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    outline: none;border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+}
+html{
+    font-size: 50%;
+    overflow-x:hidden;
+    scroll-behavior: smooth;
+}
+li{
+    list-style: none;
+}
+section{
+    padding:5rem 9%;
+}
+h1{
+    font-size: 6rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 5rem;
+    color:$primary-color;
+    padding-bottom: 2rem;
+    span{
+        text-transform: uppercase;
+        color:$secondary-color;
+    }
+}
+h2 {
+    color: $secondary-color;
+    font-size: 4rem;
+    padding-bottom: 0.5rem;
+    text-align: center;
+}
+h3 {
+    color: $black;
+    font-size: 3rem;
+    font-weight: 400;
+    padding-bottom: 0.5rem;
+}
+h4{
+    color: $black;
+    font-size: 2rem;
+    font-weight: 400;
+    padding-bottom: 0.5rem;
+}
+h5{
+    color: $secondary-color;
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-bottom: 0.5rem;
+}
+p {
+    font-size: 1.5rem;
+    color: $black;
+    padding: 1rem 0;
+}
+i{
+    color: $primary-color;
+    font-size: 3rem;
+}
+.bg-light-gray{
+    background-color: $light-color;
+}
+.before-default{
+    position: absolute;
+    bottom: 1rem;
+    right: -1rem;
+    font-size: 0.6rem;
+    color: $secondary-color;
+}
+.timeBar{
+    position: relative;
+    margin: .8rem 0;
+    max-width: 60%;
+    min-width: 20rem;
+    height: .2rem;
+    background-color: $secondary-color;
+    border-radius: .1rem;
+    &:nth-child(4){
+        &::before{
+            @extend.before-default;
+            content:'192 hours';
+        }        
+    }
+    &:nth-child(6){
+        div{
+            width: 60%;
+        }
+        &::before{
+            @extend.before-default;
+            content:'358 hours';
+        }     
+    }
+    &:nth-child(8){
+        div{
+            width: 90%;
+        }
+        &::before{
+            @extend.before-default;
+            content:'600 hours';
+        }     
+    }
+    div{
+        width: 40%;
+        height: .4rem;
+        background-color: $primary-color;
+        border-radius: 0.2rem;
+    }
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    background-color:$white;
+    color: $primary-color;
+    &:hover{
+        background-color:$primary-color;
+        color:$white; 
+    }
+}
+.flex-default{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+ul{
+    margin-top: 2rem;
+    @extend.flex-default;
+    li{
+        @extend.flex-default;
+    }
+}
