@@ -136,4 +136,18 @@ header .nav-toggle-label span { display: block; background-color: #666; width: 3
   #portfolio .portraits { position: relative; top: -20rem; right: 10rem; }
   #portfolio .product { position: relative; top: -40rem; left: 10rem; }
   #portfolio .interior { position: relative; top: -60rem; right: 10rem; } }
+
+#contact .contact-container .contact-info p i { padding-right: 1.5rem; font-size: 2rem; }
+
+#contact .contact-container .contact-info ul { margin: 2rem 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; gap: 2rem; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+
+#contact .contact-container .contact-info ul i { color: #666; }
+
+#contact .contact-container .contact-info ul i:hover { color: orange; }
+
+#contact .contact-container .message form > * { margin: 1rem 0; }
+
+#contact .contact-container .message form > input, #contact .contact-container .message form textarea { width: 100%; padding: .5rem 1rem; border: 0.2rem solid #fff; }
+
+#contact .contact-container .message form > input:hover, #contact .contact-container .message form textarea:hover { border: 0.2rem solid orange; }
 /*# sourceMappingURL=style.css.map */

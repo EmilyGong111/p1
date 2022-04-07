@@ -467,3 +467,44 @@ header{
         }
    }
 }
+#contact{
+    .contact-container{
+        .contact-info{
+            // @extend.flex-default-column;
+            p{
+                i{
+                    padding-right: 1.5rem;
+                    font-size: 2rem;
+                }
+            }
+            ul{
+                margin: 2rem 0;
+                display: flex;
+                flex-direction: row;
+                gap:2rem;
+                justify-content: center;
+                i{
+                    color: $secondary-color;
+                    &:hover{
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+        .message{
+            form{
+                >*{
+                    margin: 1rem 0;
+                }
+                >input,textarea{
+                    width: 100%;
+                    padding: .5rem 1rem;
+                    border:.2rem solid $white;
+                    &:hover{
+                        border:.2rem solid $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}
