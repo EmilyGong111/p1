@@ -470,13 +470,20 @@ header{
 #contact{
     .contact-container{
         .contact-info{
-            // @extend.flex-default-column;
-            p{
+            div{
+                display: flex;
+                align-items: center;
                 i{
-                    padding-right: 1.5rem;
+                    padding-right: 1rem;
                     font-size: 2rem;
                 }
             }
+            // p{
+            //     i{
+            //         padding-right: 1.5rem;
+            //         font-size: 2rem;
+            //     }
+            // }
             ul{
                 margin: 2rem 0;
                 display: flex;
@@ -504,7 +511,15 @@ header{
                         border:.2rem solid $primary-color;
                     }
                 }
+                textarea{
+                    height: 8rem;
+                }
             }
+        }
+        @media screen and(min-width:800px){
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
         }
     }
 }
