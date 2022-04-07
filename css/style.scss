@@ -497,11 +497,14 @@ header{
                     }
                 }
             }
+            iframe{
+                margin-bottom: 3rem;
+            }
         }
         .message{
             form{
                 >*{
-                    margin: 1rem 0;
+                    margin: .5rem 0;
                 }
                 >input,textarea{
                     width: 100%;
@@ -520,6 +523,20 @@ header{
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 3rem;
+            .contact-info{
+                div{
+                    p{
+                      padding: .5rem 0;  
+                    }
+                }
+                ul{
+                    justify-content: flex-start;
+                    margin-top: 1rem;
+                }
+                iframe{
+                    width: 80%;
+                }
+            }
         }
     }
 }

@@ -147,7 +147,9 @@ header .nav-toggle-label span { display: block; background-color: #666; width: 3
 
 #contact .contact-container .contact-info ul i:hover { color: orange; }
 
-#contact .contact-container .message form > * { margin: 1rem 0; }
+#contact .contact-container .contact-info iframe { margin-bottom: 3rem; }
+
+#contact .contact-container .message form > * { margin: .5rem 0; }
 
 #contact .contact-container .message form > input, #contact .contact-container .message form textarea { width: 100%; padding: .5rem 1rem; border: 0.2rem solid #fff; }
 
@@ -155,5 +157,8 @@ header .nav-toggle-label span { display: block; background-color: #666; width: 3
 
 #contact .contact-container .message form textarea { height: 8rem; }
 
-@media screen and (min-width: 800px) { #contact .contact-container { display: -ms-grid; display: grid; -ms-grid-columns: 1fr 1fr; grid-template-columns: 1fr 1fr; gap: 3rem; } }
+@media screen and (min-width: 800px) { #contact .contact-container { display: -ms-grid; display: grid; -ms-grid-columns: 1fr 1fr; grid-template-columns: 1fr 1fr; gap: 3rem; }
+  #contact .contact-container .contact-info div p { padding: .5rem 0; }
+  #contact .contact-container .contact-info ul { -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; margin-top: 1rem; }
+  #contact .contact-container .contact-info iframe { width: 80%; } }
 /*# sourceMappingURL=style.css.map */
