@@ -53,7 +53,7 @@ a { text-decoration: none; display: inline-block; }
 
 .btn:hover { background-color: orange; color: #fff; }
 
-.flex-default-column, header .nav-toggle-label, #banner, #about ul, #about ul li, #service, #service ul li { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -ms-flex-pack: distribute; justify-content: space-around; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+.flex-default-column, header .nav-toggle-label, #banner, #about ul, #about ul li, #service, #service ul li, #portfolio { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -ms-flex-pack: distribute; justify-content: space-around; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
 header { padding: 1rem 9%; background-color: #fff; position: fixed; top: 1rem; right: 0; left: 0; z-index: 999; width: 100%; }
 
@@ -116,7 +116,7 @@ header .nav-toggle-label span { display: block; background-color: #666; width: 3
 
 #portfolio div .content p { padding: 0; line-height: 0; color: #666; }
 
-#portfolio div img { max-width: 100%; margin-bottom: 4rem; }
+#portfolio div img { margin-bottom: 4rem; }
 
 #portfolio .portraits, #portfolio .interior { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: reverse; -ms-flex-direction: column-reverse; flex-direction: column-reverse; }
 
@@ -126,5 +126,14 @@ header .nav-toggle-label span { display: block; background-color: #666; width: 3
   #portfolio .art .content::after, #portfolio .product .content::after { content: '->'; font-size: 3rem; color: orange; position: absolute; top: 45%; right: -5rem; }
   #portfolio .portraits, #portfolio .interior { display: -ms-grid; display: grid; gap: 10rem; -ms-grid-columns: 1fr 1fr; grid-template-columns: 1fr 1fr; }
   #portfolio .portraits .content, #portfolio .interior .content { position: relative; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; }
-  #portfolio .portraits .content::before, #portfolio .interior .content::before { content: '<-'; font-size: 3rem; color: orange; position: absolute; top: 45%; left: -5rem; } }
+  #portfolio .portraits .content::before, #portfolio .interior .content::before { content: '<-'; font-size: 3rem; color: orange; position: absolute; top: 45%; left: -5rem; }
+  #portfolio .portraits { position: relative; top: -15rem; }
+  #portfolio .product { position: relative; top: -30rem; }
+  #portfolio .interior { position: relative; top: -45rem; } }
+
+@media screen and (min-width: 1440px) { #portfolio > div img { width: 400px; }
+  #portfolio .art { position: relative; left: 10rem; }
+  #portfolio .portraits { position: relative; top: -20rem; right: 10rem; }
+  #portfolio .product { position: relative; top: -40rem; left: 10rem; }
+  #portfolio .interior { position: relative; top: -60rem; right: 10rem; } }
 /*# sourceMappingURL=style.css.map */

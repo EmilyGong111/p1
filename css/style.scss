@@ -365,6 +365,7 @@ header{
     }
 }
 #portfolio{
+    @extend.flex-default-column;
    div{
     .content{
         p{
@@ -374,7 +375,7 @@ header{
         }
     }
     img{
-        max-width: 100%;
+        // max-width: 100%;
         margin-bottom: 4rem;
     }
    }
@@ -382,6 +383,9 @@ header{
    .interior{
        display: flex;
        flex-direction: column-reverse;
+    //    img{
+    //        width: 300px;
+    //    }
    }
    @media screen and(min-width:800px){
        >div{
@@ -426,6 +430,40 @@ header{
                 }
             }
         }
-       
+        .portraits{
+            position: relative;
+            top:-15rem;
+        }
+        .product{
+            position: relative;
+            top:-30rem;
+        }
+        .interior{
+            position: relative;
+            top:-45rem;
+        }
+   }
+   @media screen and(min-width:1440px){
+       >div{
+           img{
+               width: 400px;
+           }
+       }
+        .art{
+            position: relative;
+            left: 10rem;
+        }
+        .portraits{
+            position: relative;
+            top:-20rem;right:10rem;
+        }
+        .product{
+            position: relative;
+            top:-40rem;left: 10rem;
+        }
+        .interior{
+            position: relative;
+            top:-60rem;right:10rem;
+        }
    }
 }
