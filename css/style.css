@@ -85,5 +85,5 @@ header .nav-toggle-label span { display: block; background-color: #666; width: 3
   header nav ul li a { opacity: 1; }
   header .nav-toggle-label { display: none; } }
 
-#banner { margin-top: 5rem; height: 100vh; background-image: url("../images/banner_image.jpg"); background-position: center; background-size: cover; background-repeat: no-repeat; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; }
+#banner { margin-top: 5rem; height: 80vh; background-image: url("../images/banner_image.jpg"); background-position: center; background-size: cover; background-repeat: no-repeat; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; }
 /*# sourceMappingURL=style.css.map */
