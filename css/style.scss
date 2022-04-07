@@ -5,6 +5,7 @@ $secondary-color:#666;
 $light-color:#eee;
 $white:#fff;
 $black:#000;
+$transparent-white:rgba(255,255,255,.85);
 
 *{
     font-family:'Poppins', sans-serif;
@@ -197,7 +198,7 @@ header{
         text-align: center;
         top: 100%;
         right: 0;
-        background: rgba(255,255,255,.85);
+        background:$transparent-white;
         width: 100%;
         transform: scale(1,0);
         transform-origin: top;
@@ -205,9 +206,10 @@ header{
         ul{
             li{
                 margin-bottom: 1rem;
-                margin-right: 9%;
+                // margin-right: 9%;
                 a{
                     display: inline-block;
+                    width: 100%;
                     // padding: 1rem 2rem;
                     font-size: 1.5rem;
                     background-color:$white;
@@ -258,6 +260,7 @@ header{
                 justify-content: space-around;
                 align-items: center;
                 li{
+                    margin-right: 9%;
                     a{
                         opacity:1;
                     }
@@ -315,7 +318,7 @@ header{
     @media screen and(min-width:1440px){
         ul{
             display: grid;
-            margin-top: 3rem;
+            margin: 3rem 0;
             grid-template-columns: repeat(4,1fr);
         }
         .intro{
@@ -539,4 +542,16 @@ header{
             }
         }
     }
+    @media screen and(min-width:800px) {
+        margin-top: -45rem;
+    }
+    @media screen and(min-width:1440px) {
+        margin-top: -60rem;
+    }
+}
+footer{
+    height: 5rem;
+    width: 100%;
+    text-align: center;
+    line-height: 5rem;
 }
