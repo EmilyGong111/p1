@@ -49,10 +49,11 @@ h1{
     }
 }
 h2 {
-    color: $secondary-color;
+    color: $black;
     font-size: 4rem;
     padding-bottom: 0.5rem;
     text-align: center;
+    padding-bottom: 3rem;
 }
 h3 {
     color: $black;
@@ -61,7 +62,7 @@ h3 {
     padding-bottom: 0.5rem;
 }
 h4{
-    color: $black;
+    color: $secondary-color;
     font-size: 2rem;
     font-weight: 400;
     padding-bottom: 0.5rem;
@@ -74,6 +75,7 @@ h5{
 }
 p {
     font-size: 1.5rem;
+    font-weight: 300;
     color: $black;
     padding: 1rem 0;
 }
@@ -277,4 +279,57 @@ header{
     background-repeat: no-repeat;
     @extend.flex-default-column;
     align-items: flex-start;
+    @media screen and(min-width:1440px){
+        height: 100vh;
+    }
+}
+#about{
+    ul{
+        @extend.flex-default-column;
+        li{
+            @extend.flex-default-column;
+            padding-bottom: 2rem;
+        }
+    }
+    .intro{
+        div{
+            margin:2rem 0;
+        }
+    }
+    @media screen and(min-width:800px) {
+        ul{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .intro{
+            div{
+                display: grid;
+                gap: 3rem;
+                grid-template-columns: 1fr 2fr;
+                h3{
+                    text-align: right;
+                }
+            }
+        }
+    }
+    @media screen and(min-width:1440px){
+        ul{
+            display: grid;
+            margin-top: 3rem;
+            grid-template-columns: repeat(4,1fr);
+        }
+        .intro{
+            div{
+                display: grid;
+                gap: 3rem;
+                grid-template-columns: 2fr 3fr;
+                h3{
+                    text-align: right;
+                }
+                p{
+                    width: 60%;
+                }
+            }
+        }
+    }
 }
