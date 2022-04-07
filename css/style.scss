@@ -27,10 +27,13 @@ li{
     list-style: none;
 }
 section{
-    padding:5rem 9%;
+    padding:5rem 6%;
+    @media screen and(min-width:1440px) {
+        padding:5rem 9%;
+    }
 }
 h1{
-    font-size: 6rem;
+    font-size: 5rem;
     font-weight: 800;
     text-transform: uppercase;
     line-height: 5rem;
@@ -39,6 +42,10 @@ h1{
     span{
         text-transform: uppercase;
         color:$secondary-color;
+    }
+    @media screen and(min-width:1440px) {
+        font-size: 10rem;
+        line-height: 10rem;
     }
 }
 h2 {
@@ -162,6 +169,7 @@ header{
     padding:1rem 9%;
     background-color: $white;
     position: fixed;
+    top: 1rem;right: 0;left: 0;
     z-index: 999;
     width: 100%;
     .logo{
@@ -258,4 +266,15 @@ header{
             display: none;
         }
     }
+}
+#banner{
+    margin-top: 5rem;
+    height: 100vh;
+    // height: min(30rem, 70rem);
+    background-image: url("../images/banner_image.jpg");
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @extend.flex-default-column;
+    align-items: flex-start;
 }
