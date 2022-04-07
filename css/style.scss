@@ -68,9 +68,9 @@ h4{
     padding-bottom: 0.5rem;
 }
 h5{
-    color: $secondary-color;
+    color: $black;
     font-size: 1.5rem;
-    font-weight: 400;
+    font-weight: 300;
     padding-bottom: 0.5rem;
 }
 p {
@@ -330,6 +330,37 @@ header{
                     width: 60%;
                 }
             }
+        }
+    }
+}
+#service{
+    @extend.flex-default-column;
+    p{
+        text-align: center;
+    }
+    ul{
+        width: 100%;
+        margin-top: 2rem;
+        li{
+            @extend.flex-default-column; 
+            align-items: center;
+            width: 100%;
+            >*{
+                text-align: center;
+            }
+        }
+    }
+    @media screen and(min-width:800px) {
+        ul{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    @media screen and(min-width:1440px){
+        ul{
+            display: grid;
+            margin-top: 3rem;
+            grid-template-columns: repeat(4,1fr);
         }
     }
 }
