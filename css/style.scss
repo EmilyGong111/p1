@@ -364,3 +364,68 @@ header{
         }
     }
 }
+#portfolio{
+   div{
+    .content{
+        p{
+            padding: 0;
+            line-height: 0;
+            color: $secondary-color;
+        }
+    }
+    img{
+        max-width: 100%;
+        margin-bottom: 4rem;
+    }
+   }
+   .portraits,
+   .interior{
+       display: flex;
+       flex-direction: column-reverse;
+   }
+   @media screen and(min-width:800px){
+       >div{
+           display: grid;
+           gap: 10rem;
+           grid-template-columns: 1fr 1fr;
+           .content{
+               display: flex;
+               flex-direction: column;
+               justify-content: center;
+            //    align-items: flex-end;
+           }
+       }
+        .art,
+        .product{
+            .content{
+                position: relative;
+                align-items:flex-end;
+                &::after{
+                    content: '->';
+                    font-size: 3rem;
+                    color: $primary-color;
+                    position: absolute;
+                    top: 45%;right: -5rem;
+                }
+            }
+        }
+        .portraits,
+        .interior{
+            display: grid;
+            gap: 10rem;
+            grid-template-columns: 1fr 1fr;
+            .content{
+                position: relative;
+                align-items:flex-start;
+                &::before{
+                    content: '<-';
+                    font-size: 3rem;
+                    color: $primary-color;
+                    position: absolute;
+                    top: 45%;left: -5rem;
+                }
+            }
+        }
+       
+   }
+}
