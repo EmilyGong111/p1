@@ -19,6 +19,9 @@ html{
     font-size: 50%;
     overflow-x:hidden;
     scroll-behavior: smooth;
+    @media screen and (min-width:800px){
+        font-size: 65%;
+    }
 }
 li{
     list-style: none;
@@ -84,7 +87,7 @@ i{
 .timeBar{
     position: relative;
     margin: .8rem 0;
-    max-width: 60%;
+    max-width: 25rem;
     min-width: 20rem;
     height: .2rem;
     background-color: $secondary-color;
@@ -123,6 +126,9 @@ i{
 a{
     text-decoration: none;
     display: inline-block;
+  
+}
+.btn{
     padding: 1rem 2rem;
     font-size: 1.5rem;
     background-color:$white;
@@ -132,16 +138,124 @@ a{
         color:$white; 
     }
 }
-.flex-default{
+.flex-default-column{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
-ul{
-    margin-top: 2rem;
-    @extend.flex-default;
-    li{
-        @extend.flex-default;
+// .flex-default-row{
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+//     align-items: center;
+// }
+// ul{
+//     margin-top: 2rem;
+//     @extend.flex-default-column;
+//     li{
+//         @extend.flex-default-column;
+//     }
+// }
+
+header{
+    padding:1rem 9%;
+    background-color: $white;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    .logo{
+        font-size: 3rem;
+        color: $secondary-color;
+        font-weight: 800;
+    }
+    .nav-toggle{
+        display: none;
+    }
+    .nav-toggle:checked ~ nav{
+        // display: block;
+        transform: scale(1,1);
+        transition: transform 200ms ease-in-out;
+        a{
+            opacity: 1;
+            transition: opacity 250ms ease-in-out 250ms;
+        }
+    }
+    nav{
+        padding-top: 1rem;
+        position: absolute;
+        text-align: center;
+        top: 100%;
+        right: 0;
+        background: rgba(255,255,255,.85);
+        width: 100%;
+        transform: scale(1,0);
+        transform-origin: top;
+        transition: transform 400ms ease-in-out;
+        ul{
+            li{
+                margin-bottom: 1rem;
+                margin-right: 9%;
+                a{
+                    display: inline-block;
+                    // padding: 1rem 2rem;
+                    font-size: 1.5rem;
+                    background-color:$white;
+                    color: $secondary-color;
+                    opacity:0;
+                    transition: opacity 150ms ease-in-out;
+                    &:hover{
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+    .nav-toggle-label{
+        position: absolute;
+        top: 0;
+        right: 9%;
+        // margin-right: 9%;
+        height: 100%;
+        display: flex;
+        @extend.flex-default-column;
+        justify-content: center;
+        gap: .3rem;
+        &:hover{
+            span{
+                background-color:$primary-color;
+            }
+        }
+        span{
+            display: block;
+            background-color:$secondary-color;
+            width:3rem;
+            height: .4rem;
+            border-radius: .4rem;
+        }
+       
+    }
+    @media screen and (min-width:800px){
+        background-color:$white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        nav{
+            all:unset;
+            ul{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                li{
+                    a{
+                        opacity:1;
+                    }
+                }
+            }
+        }
+        .nav-toggle-label{
+            display: none;
+        }
     }
 }
