@@ -20,6 +20,7 @@ html{
     font-size: 50%;
     overflow-x:hidden;
     scroll-behavior: smooth;
+    line-height: 3rem;
     @media screen and (min-width:800px){
         font-size: 65%;
     }
@@ -28,7 +29,7 @@ li{
     list-style: none;
 }
 section{
-    padding:5rem 6%;
+    padding:8rem 6%;
     @media screen and(min-width:1440px) {
         padding:5rem 9%;
     }
@@ -172,7 +173,7 @@ header{
     padding:1rem 9%;
     background-color: $white;
     position: fixed;
-    top: 1rem;right: 0;left: 0;
+    top: 0;right: 0;left: 0;
     z-index: 999;
     width: 100%;
     .logo{
@@ -357,6 +358,7 @@ header{
         ul{
             display: grid;
             grid-template-columns: 1fr 1fr;
+            place-items: center;
         }
     }
     @media screen and(min-width:1440px){
@@ -373,7 +375,7 @@ header{
     .content{
         p{
             padding: 0;
-            line-height: 0;
+            line-height: 1rem;
             color: $secondary-color;
         }
     }
