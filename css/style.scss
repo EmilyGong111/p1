@@ -142,9 +142,11 @@ a{
 .btn{
     padding: 1rem 2rem;
     font-size: 1.5rem;
+    letter-spacing: .1rem;
     background-color:$white;
     color: $primary-color;
     &:hover{
+        letter-spacing: .2rem;
         background-color:$primary-color;
         color:$white; 
     }
@@ -155,19 +157,6 @@ a{
     justify-content: space-around;
     align-items: center;
 }
-// .flex-default-row{
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: space-between;
-//     align-items: center;
-// }
-// ul{
-//     margin-top: 2rem;
-//     @extend.flex-default-column;
-//     li{
-//         @extend.flex-default-column;
-//     }
-// }
 
 header{
     padding:1rem 9%;
@@ -185,7 +174,6 @@ header{
         display: none;
     }
     .nav-toggle:checked ~ nav{
-        // display: block;
         transform: scale(1,1);
         transition: transform 200ms ease-in-out;
         a{
@@ -380,7 +368,6 @@ header{
         }
     }
     img{
-        // max-width: 100%;
         margin-bottom: 4rem;
     }
    }
@@ -388,9 +375,6 @@ header{
    .interior{
        display: flex;
        flex-direction: column-reverse;
-    //    img{
-    //        width: 300px;
-    //    }
    }
    @media screen and(min-width:800px){
        >div{
@@ -401,7 +385,6 @@ header{
                display: flex;
                flex-direction: column;
                justify-content: center;
-            //    align-items: flex-end;
            }
        }
         .art,
@@ -483,12 +466,6 @@ header{
                     font-size: 2rem;
                 }
             }
-            // p{
-            //     i{
-            //         padding-right: 1.5rem;
-            //         font-size: 2rem;
-            //     }
-            // }
             ul{
                 margin: 2rem 0;
                 display: flex;
