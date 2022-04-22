@@ -543,9 +543,21 @@ header{
                 gap:2rem;
                 justify-content: center;
                 i{
-                    color: $secondary-color;
+                    color:  $white;
+                    animation: socialMediaLink 2s infinite;
+                    @keyframes socialMediaLink {
+                        100% {
+                            transform: rotateY(360deg);
+                        } 
+                    }
                     &:hover{
                         color: $primary-color;
+                        animation: socialMediaLink 0s infinite;
+                        @keyframes socialMediaLink {
+                            100% {
+                                transform: rotateY(360deg);
+                            } 
+                        }
                     }
                 }
             }

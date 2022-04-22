@@ -171,9 +171,15 @@ header .nav-toggle-label span { display: block; background-color: #666; width: 3
 
 #contact .contact-container .contact-info ul { margin: 2rem 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; gap: 2rem; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
 
-#contact .contact-container .contact-info ul i { color: #666; }
+#contact .contact-container .contact-info ul i { color: #fff; -webkit-animation: socialMediaLink 2s infinite; animation: socialMediaLink 2s infinite; }
 
-#contact .contact-container .contact-info ul i:hover { color: orange; }
+@-webkit-keyframes socialMediaLink { 100% { -webkit-transform: rotateY(360deg); transform: rotateY(360deg); } }
+
+@keyframes socialMediaLink { 100% { -webkit-transform: rotateY(360deg); transform: rotateY(360deg); } }
+
+#contact .contact-container .contact-info ul i:hover { color: orange; -webkit-animation: socialMediaLink 0s infinite; animation: socialMediaLink 0s infinite; }
+
+@keyframes socialMediaLink { 100% { -webkit-transform: rotateY(360deg); transform: rotateY(360deg); } }
 
 #contact .contact-container .contact-info iframe { margin-bottom: 3rem; }
 
