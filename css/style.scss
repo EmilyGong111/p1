@@ -6,6 +6,7 @@ $light-color:#eee;
 $white:#fff;
 $black:#000;
 $transparent-white:rgba(255,255,255,.85);
+$box-shadow:-3px 0px 20px #bbb;
 
 *{
     font-family:'Poppins', sans-serif;
@@ -24,14 +25,17 @@ html{
     @media screen and (min-width:800px){
         font-size: 65%;
     }
+    @media screen and (min-width:1440px){
+        font-size: 75%;
+    }
 }
 li{
     list-style: none;
 }
 section{
-    padding:8rem 6%;
+    padding:10rem 6%;
     @media screen and(min-width:1440px) {
-        padding:5rem 9%;
+        padding:10rem 9%;
     }
 }
 h1{
@@ -95,49 +99,9 @@ i{
     font-size: 0.6rem;
     color: $secondary-color;
 }
-.timeBar{
-    position: relative;
-    margin: .8rem 0;
-    max-width: 25rem;
-    min-width: 20rem;
-    height: .2rem;
-    background-color: $secondary-color;
-    border-radius: .1rem;
-    &:nth-child(4){
-        &::before{
-            @extend.before-default;
-            content:'192 hours';
-        }        
-    }
-    &:nth-child(6){
-        div{
-            width: 60%;
-        }
-        &::before{
-            @extend.before-default;
-            content:'358 hours';
-        }     
-    }
-    &:nth-child(8){
-        div{
-            width: 90%;
-        }
-        &::before{
-            @extend.before-default;
-            content:'600 hours';
-        }     
-    }
-    div{
-        width: 40%;
-        height: .4rem;
-        background-color: $primary-color;
-        border-radius: 0.2rem;
-    }
-}
 a{
     text-decoration: none;
     display: inline-block;
-  
 }
 .btn{
     padding: 1rem 2rem;
@@ -159,12 +123,18 @@ a{
 }
 
 header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     padding:1rem 9%;
+    // margin-top: 1rem;
     background-color: $white;
     position: fixed;
     top: 0;right: 0;left: 0;
     z-index: 999;
     width: 100%;
+    height: 8rem;
+    box-shadow:$box-shadow;
     .logo{
         font-size: 3rem;
         color: $secondary-color;
@@ -196,7 +166,7 @@ header{
             li{
                 margin-bottom: 1rem;
                 // margin-right: 9%;
-                a{
+                .nav_item{
                     display: inline-block;
                     width: 100%;
                     // padding: 1rem 2rem;
@@ -206,7 +176,8 @@ header{
                     opacity:0;
                     transition: opacity 150ms ease-in-out;
                     &:hover{
-                        color: $primary-color;
+                        color: $white;
+                        background-color: $primary-color;
                     }
                 }
             }
@@ -237,21 +208,40 @@ header{
        
     }
     @media screen and (min-width:800px){
-        background-color:$white;
+        // background-color:$white;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: flex-end;
+        align-items: center;
         nav{
             all:unset;
             ul{
                 display: flex;
                 justify-content: space-around;
-                align-items: center;
+                gap: 3rem;
+                align-items: flex-end;
                 li{
-                    margin-right: 9%;
-                    a{
+                    margin-bottom: 0;
+                    .nav_item{
+                        position: relative;
                         opacity:1;
+                        &::after{
+                            content: '';
+                            width: 0;
+                            height: .3rem;
+                            background-color: $primary-color;
+                            position: absolute;
+                            bottom: -0.3rem;left: 0;
+                            transition: width 0.3s ease-in-out;
+                        }
+                        &:hover{
+                            color: $primary-color;
+                            background-color: $white;
+                            &::after{
+                                width: 100%;
+                                transition: width 0.3s ease-in-out;
+                            }
+                        }
                     }
                 }
             }
@@ -262,7 +252,7 @@ header{
     }
 }
 #banner{
-    margin-top: 5rem;
+    // margin-top: 9rem;
     height: 80vh;
     // height: min(30rem, 70rem);
     background-image: url("../images/banner_image.jpg");
@@ -340,6 +330,49 @@ header{
             >*{
                 text-align: center;
             }
+            &:nth-child(4){
+                .timeBar{
+                    position: relative;
+                    margin: .8rem 0;
+                    max-width: 25rem;
+                    min-width: 20rem;
+                    height: .2rem;
+                    background-color: $secondary-color;
+                    border-radius: .1rem;
+                    &:nth-child(4){
+                        &::before{
+                            @extend.before-default;
+                            content:'192 hours';
+                        }        
+                    }
+                    &:nth-child(6){
+                        div{
+                            width: 60%;
+                        }
+                        &::before{
+                            @extend.before-default;
+                            content:'358 hours';
+                        }     
+                    }
+                    &:nth-child(8){
+                        div{
+                            width: 90%;
+                        }
+                        &::before{
+                            @extend.before-default;
+                            content:'600 hours';
+                        }     
+                    }
+                    div{
+                        position: absolute;
+                        bottom: -0.08rem;
+                        width: 40%;
+                        height: .4rem;
+                        background-color: $primary-color;
+                        border-radius: 0.2rem;
+                    }
+                }
+            }
         }
     }
     @media screen and(min-width:800px) {
@@ -397,7 +430,7 @@ header{
                     font-size: 3rem;
                     color: $primary-color;
                     position: absolute;
-                    top: 45%;right: -5rem;
+                    bottom:45%;right: -5rem;
                 }
             }
         }
@@ -414,7 +447,7 @@ header{
                     font-size: 3rem;
                     color: $primary-color;
                     position: absolute;
-                    top: 45%;left: -5rem;
+                    bottom: 45%;left: -5rem;
                 }
             }
         }
@@ -498,6 +531,7 @@ header{
                 }
                 textarea{
                     height: 8rem;
+                    resize: vertical;
                 }
             }
         }

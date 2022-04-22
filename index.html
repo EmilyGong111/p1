@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable = no;">
     <title>Professional Photographer</title>
     <link rel="icon" type="image/x-icon" href="./images/icons-camera-30.png">
     <!-- font awesome cdn link -->
@@ -18,11 +18,11 @@
         <input type="checkbox" id="nav-toggle" class="nav-toggle"/>
         <nav>
             <ul>
-                <li><a href="#banner">home</a></li>
-                <li><a href="#about">about</a></li>
-                <li><a href="#service">services</a></li>
-                <li><a href="#portfolio">portfolio</a></li>
-                <li><a href="#contact">contact</a></li>
+                <li><a class="nav_item nav_item--active" href="#banner">home</a></li>
+                <li><a class="nav_item" href="#about">about</a></li>
+                <li><a class="nav_item" href="#service">services</a></li>
+                <li><a class="nav_item" href="#portfolio">portfolio</a></li>
+                <li><a class="nav_item" href="#contact">contact</a></li>
             </ul> 
         </nav>
         <label for="nav-toggle" class="nav-toggle-label">
@@ -182,12 +182,12 @@
         </div>
         <div class="message">
             <h3>message</h3>
-            <form action="submit">
-                <input type="text" placeholder="full name">
-                <input type="text" placeholder="your email">
-                <input type="text" placeholder="subject">
+            <form action="mailto:emily.gong.dev@icloud.com" method="post" enctype="text/plain">
+                <input type="text" name="name" placeholder="full name">
+                <input type="email" name="email" placeholder="your email">
+                <input type="number" name="phone" placeholder="phone">
                 <textarea type="text" placeholder="your message"></textarea>
-                <button class="btn">Submit</button>
+                <button type="submit" class="btn">Submit</button>
             </form>
         </div>
        </div>
