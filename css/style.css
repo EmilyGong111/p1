@@ -11,7 +11,7 @@ li { list-style: none; }
 
 section { position: relative; padding: 10rem 6%; }
 
-section .animation_element { position: absolute; top: 7rem; left: calc(50% - 24rem); display: -ms-grid; display: grid; -ms-grid-columns: 1fr 1fr; grid-template-columns: 1fr 1fr; gap: 3rem; width: 48rem; font-size: 1.5rem; color: orange; -webkit-animation: slidein 2s infinite alternate; animation: slidein 2s infinite alternate; }
+section .animation_element { position: absolute; top: 7rem; left: calc(50% - 20rem); display: -ms-grid; display: grid; -ms-grid-columns: 1fr 1fr; grid-template-columns: 1fr 1fr; gap: 3rem; width: 40rem; font-size: 1.5rem; color: orange; -webkit-animation: slidein 2s infinite alternate; animation: slidein 2s infinite alternate; }
 
 @-webkit-keyframes slidein { 0% { opacity: 0; }
   15% { opacity: .6; }

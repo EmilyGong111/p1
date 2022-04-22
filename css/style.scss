@@ -38,11 +38,11 @@ section{
     .animation_element{
         position: absolute;
         top: 7rem;
-        left:calc(50% - 24rem);
+        left:calc(50% - 20rem);
         display:grid;
         grid-template-columns: 1fr 1fr;
         gap: 3rem;
-        width: 48rem;
+        width: 40rem;
         font-size: 1.5rem;
         color: $primary-color;
         animation: slidein 2s infinite alternate ;
