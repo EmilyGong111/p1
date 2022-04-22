@@ -33,7 +33,42 @@ li{
     list-style: none;
 }
 section{
+    position: relative;
     padding:10rem 6%;
+    .animation_element{
+        position: absolute;
+        top: 7rem;
+        left:calc(50% - 24rem);
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        width: 48rem;
+        font-size: 1.5rem;
+        color: $primary-color;
+        animation: slidein 2s infinite alternate ;
+        @keyframes slidein {
+            0%   {
+                opacity: 0;
+            }
+            15%  {
+                opacity: .6;
+            }
+            25%  {
+                opacity: .1;
+                width: 50rem;
+                left:calc(50% - 25rem);
+                gap: 4rem;
+                font-size: 3rem;
+            }
+            50%{
+                opacity: 1;
+            }
+          }
+        span{
+            text-align: center;
+            // font-size: 2rem;
+        }
+    }
     @media screen and(min-width:1440px) {
         padding:10rem 9%;
     }
@@ -55,11 +90,12 @@ h1{
     }
 }
 h2 {
+    position: relative;
     color: $black;
     font-size: 4rem;
     padding-bottom: 0.5rem;
     text-align: center;
-    padding-bottom: 3rem;
+    padding-bottom: 8rem;
 }
 h3 {
     color: $black;
@@ -121,6 +157,7 @@ a{
     justify-content: space-around;
     align-items: center;
 }
+
 
 header{
     display: flex;

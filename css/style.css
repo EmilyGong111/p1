@@ -9,7 +9,29 @@ html { font-size: 50%; overflow-x: hidden; scroll-behavior: smooth; line-height:
 
 li { list-style: none; }
 
-section { padding: 10rem 6%; }
+section { position: relative; padding: 10rem 6%; }
+
+section .animation_element { position: absolute; top: 7rem; left: calc(50% - 24rem); display: -ms-grid; display: grid; -ms-grid-columns: 1fr 1fr; grid-template-columns: 1fr 1fr; gap: 3rem; width: 48rem; font-size: 1.5rem; color: orange; -webkit-animation: slidein 2s infinite alternate; animation: slidein 2s infinite alternate; }
+
+@-webkit-keyframes slidein { 0% { opacity: 0; }
+  15% { opacity: .6; }
+  25% { opacity: .1;
+    width: 50rem;
+    left: calc(50% - 25rem);
+    gap: 4rem;
+    font-size: 3rem; }
+  50% { opacity: 1; } }
+
+@keyframes slidein { 0% { opacity: 0; }
+  15% { opacity: .6; }
+  25% { opacity: .1;
+    width: 50rem;
+    left: calc(50% - 25rem);
+    gap: 4rem;
+    font-size: 3rem; }
+  50% { opacity: 1; } }
+
+section .animation_element span { text-align: center; }
 
 @media screen and (min-width: 1440px) { section { padding: 10rem 9%; } }
 
@@ -19,7 +41,7 @@ h1 span { text-transform: uppercase; color: #666; }
 
 @media screen and (min-width: 1440px) { h1 { font-size: 10rem; line-height: 10rem; } }
 
-h2 { color: #000; font-size: 4rem; padding-bottom: 0.5rem; text-align: center; padding-bottom: 3rem; }
+h2 { position: relative; color: #000; font-size: 4rem; padding-bottom: 0.5rem; text-align: center; padding-bottom: 8rem; }
 
 h3 { color: #000; font-size: 3rem; font-weight: 400; padding-bottom: 0.5rem; }
 
