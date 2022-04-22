@@ -447,7 +447,10 @@ header{
        flex-direction: column-reverse;
    }
    @media screen and(min-width:800px){
-       >div{
+       .art,
+       .portraits,
+       .product,
+       .interior{
            display: grid;
            gap: 10rem;
            grid-template-columns: 1fr 1fr;

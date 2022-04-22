@@ -148,8 +148,8 @@ header .nav-toggle-label span { display: block; background-color: #666; width: 3
 
 #portfolio .portraits, #portfolio .interior { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: reverse; -ms-flex-direction: column-reverse; flex-direction: column-reverse; }
 
-@media screen and (min-width: 800px) { #portfolio > div { display: -ms-grid; display: grid; gap: 10rem; -ms-grid-columns: 1fr 1fr; grid-template-columns: 1fr 1fr; }
-  #portfolio > div .content { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+@media screen and (min-width: 800px) { #portfolio .art, #portfolio .portraits, #portfolio .product, #portfolio .interior { display: -ms-grid; display: grid; gap: 10rem; -ms-grid-columns: 1fr 1fr; grid-template-columns: 1fr 1fr; }
+  #portfolio .art .content, #portfolio .portraits .content, #portfolio .product .content, #portfolio .interior .content { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
   #portfolio .art .content, #portfolio .product .content { position: relative; -webkit-box-align: end; -ms-flex-align: end; align-items: flex-end; }
   #portfolio .art .content::after, #portfolio .product .content::after { content: '->'; font-size: 3rem; color: orange; position: absolute; bottom: 45%; right: -5rem; }
   #portfolio .portraits, #portfolio .interior { display: -ms-grid; display: grid; gap: 10rem; -ms-grid-columns: 1fr 1fr; grid-template-columns: 1fr 1fr; }
