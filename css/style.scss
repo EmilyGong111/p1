@@ -66,7 +66,6 @@ section{
           }
         span{
             text-align: center;
-            // font-size: 2rem;
         }
     }
     @media screen and(min-width:1440px) {
@@ -164,7 +163,6 @@ header{
     flex-direction: row;
     align-items: center;
     padding:1rem 9%;
-    // margin-top: 1rem;
     background-color: $white;
     position: fixed;
     top: 0;right: 0;left: 0;
@@ -202,11 +200,9 @@ header{
         ul{
             li{
                 margin-bottom: 1rem;
-                // margin-right: 9%;
                 .nav_item{
                     display: inline-block;
                     width: 100%;
-                    // padding: 1rem 2rem;
                     font-size: 1.5rem;
                     background-color:$white;
                     color: $secondary-color;
@@ -224,7 +220,6 @@ header{
         position: absolute;
         top: 0;
         right: 9%;
-        // margin-right: 9%;
         height: 100%;
         display: flex;
         @extend.flex-default-column;
@@ -245,7 +240,6 @@ header{
        
     }
     @media screen and (min-width:800px){
-        // background-color:$white;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -289,9 +283,7 @@ header{
     }
 }
 #banner{
-    // margin-top: 9rem;
     height: 80vh;
-    // height: min(30rem, 70rem);
     background-image: url("../images/banner_image.jpg");
     background-position:center;
     background-size: cover;
